@@ -34,6 +34,7 @@ const forgeConfig = {
         mainConfig: "./webpack.main.config.js",
         renderer: {
           config: "./webpack.renderer.config.js",
+          nodeIntegration: true,
           entryPoints: [
             {
               html: "./static/index.html",

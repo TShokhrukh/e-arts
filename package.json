@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "config": {
-    "forge": "./forge.config.ts"
+    "forge": "./forge.config.js"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
@@ -41,9 +41,11 @@
     "node-loader": "^2.0.0",
     "style-loader": "^3.0.0",
     "ts-loader": "^9.2.2",
+    "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "~4.5.4"
   },
   "dependencies": {
+    "electron-devtools-installer": "^3.2.0",
     "electron-squirrel-startup": "^1.0.0",
     "mobx": "^6.6.2",
     "mobx-react-lite": "^3.4.0",

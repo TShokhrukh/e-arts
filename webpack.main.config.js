@@ -1,14 +1,14 @@
-module.exports = {
-  /**
-   * This is the main entry point for your application, it's the first file
-   * that runs in the main process.
-   */
-  entry: './src/index.ts',
-  // Put your normal webpack config below here
+/* eslint-disable @typescript-eslint/no-var-requires */
+const webpackRules = require('./bin/webpack.rules')
+
+const config = {
+  entry: './src/main/index.ts',
   module: {
-    rules: require('./webpack.rules'),
+    rules: webpackRules
   },
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
-  },
-};
+  }
+}
+
+module.exports = config

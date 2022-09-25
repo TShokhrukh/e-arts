@@ -1,4 +1,5 @@
-module.exports = [
+
+const webpackRules = [
   // Add support for native node modules
   {
     // We're specifying native_modules in the test because the asset relocator loader generates a
@@ -26,4 +27,6 @@ module.exports = [
       },
     },
   },
-];
+]
+
+module.exports = webpackRules

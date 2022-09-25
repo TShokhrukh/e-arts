@@ -1,17 +1,18 @@
-const rules = require('./webpack.rules');
-const plugins = require('./webpack.plugins');
+/* eslint-disable @typescript-eslint/no-var-requires */
+const webpackPlugins = require('./bin/webpack.plugins')
+const webpackRules = require('./bin/webpack.rules')
 
-rules.push({
-  test: /\.css$/,
-  use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
-});
-
-module.exports = {
+const config = {
   module: {
-    rules,
+    rules: webpackRules.concat([{
+      test: /\.css$/,
+      use: [{ loader: 'style-loader' }, {loader: 'css-loader' }],
+    }])
   },
-  plugins: plugins,
+  plugins: webpackPlugins,
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
-  },
-};
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
+  }
+}
+
+module.exports =   config

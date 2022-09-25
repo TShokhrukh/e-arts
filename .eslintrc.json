@@ -12,5 +12,15 @@
     "plugin:import/electron",
     "plugin:import/typescript"
   ],
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "camelcase": ["error"],
+    "semi": ["error", "never"],
+    "eol-last": ["error", "always"],
+    "space-before-function-paren": ["error", {
+      "anonymous": "always",
+      "named": "always",
+      "asyncArrow": "ignore"
+    }]
+  }
 }

@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const webpackRules = require('./bin/webpack.rules')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin').default
 
 const config = {
   entry: './src/main/index.ts',
@@ -8,6 +9,7 @@ const config = {
   },
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
+    plugins: [new TsconfigPathsPlugin()]
   }
 }
 

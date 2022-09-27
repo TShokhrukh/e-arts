@@ -22,6 +22,7 @@
   "parser": "@typescript-eslint/parser",
   "rules": {
     "camelcase": ["error"],
+    "quotes": ["error", "single"],
     "quote-props": ["error", "as-needed"],
     "key-spacing": ["error", {
       "beforeColon": false,

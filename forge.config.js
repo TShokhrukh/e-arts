@@ -7,39 +7,39 @@ const forgeConfig = {
   },
   makers: [
     {
-      name: "@electron-forge/maker-squirrel",
+      name: '@electron-forge/maker-squirrel',
       config: {
-        name: "reddit_2"
+        name: 'reddit_2'
       }
     },
     {
-      name: "@electron-forge/maker-zip",
+      name: '@electron-forge/maker-zip',
       platforms: [
-        "darwin"
+        'darwin'
       ]
     },
     {
-      name: "@electron-forge/maker-deb",
+      name: '@electron-forge/maker-deb',
       config: {}
     },
     {
-      name: "@electron-forge/maker-rpm",
+      name: '@electron-forge/maker-rpm',
       config: {}
     }
   ],
   plugins: [
     [
-      "@electron-forge/plugin-webpack",
+      '@electron-forge/plugin-webpack',
       {
-        mainConfig: "./webpack.main.config.js",
+        mainConfig: './webpack.main.config.js',
         renderer: {
-          config: "./webpack.renderer.config.js",
+          config: './webpack.renderer.config.js',
           nodeIntegration: true,
           entryPoints: [
             {
-              html: "./static/index.html",
-              js: "./src/renderer/renderer.ts",
-              name: "main_window"
+              html: './static/index.html',
+              js: './src/renderer/view/main/index.ts',
+              name: 'main_window'
             }
           ]
         }

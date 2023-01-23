@@ -5,8 +5,7 @@ import { AppWindow } from './windows/app-window'
 
 export class Application {
   static instance = new Application()
-
-  appWindow: IWindow
+  appWindow?: IWindow
 
   public start (): void {
     const gotTheLock = app.requestSingleInstanceLock()

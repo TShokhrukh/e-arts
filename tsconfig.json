@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "allowJs": true,
     "target": "ES6",
     "module": "commonjs",
     "skipLibCheck": true,
+    "strict": true,
     "esModuleInterop": true,
     "noImplicitAny": true,
     "sourceMap": true,
@@ -11,6 +13,7 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
     "paths": {
       "~/*": ["./src/*"]
     }
